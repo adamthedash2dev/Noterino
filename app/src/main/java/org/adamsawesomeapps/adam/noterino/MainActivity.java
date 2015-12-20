@@ -33,15 +33,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String PREFS = "prefs";
     private static final String PREF_NAME = "name";
     private static final String PREF_NOTES = "noteList";
+
     SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.UK);
     SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.UK);
     SimpleDateFormat timeAndDateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm", Locale.UK);
+
     Button mainButton;
     EditText mainEditText;
     ListView mainListView;
     ArrayAdapter<String> mainArrayAdapter;
     ArrayList<String> mainNoteList = new ArrayList<>();
     ShareActionProvider mainShareActionProvider;
+
     private Intent mainShareIntent;
     private SharedPreferences mainSharedPreferences;
     private String name;
