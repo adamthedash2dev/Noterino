@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mainEditText = (EditText) findViewById(R.id.main_editText);
 
-
         mainListView = (ListView) findViewById(R.id.main_listView);
         mainArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mainNoteList);
         mainListView.setAdapter(mainArrayAdapter);
