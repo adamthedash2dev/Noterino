@@ -9,8 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.ShareActionProvider;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.view.Menu;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -30,25 +30,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static final String defaultShareSubject = "Default Subject";
     private static final String defaultShareMessage = "Default message";
-    private Intent mainShareIntent;
-
     private static final String PREFS = "prefs";
     private static final String PREF_NAME = "name";
     private static final String PREF_NOTES = "noteList";
-    private SharedPreferences mainSharedPreferences;
-
     SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.UK);
     SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.UK);
     SimpleDateFormat timeAndDateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm", Locale.UK);
-
-    private String name;
-
     Button mainButton;
     EditText mainEditText;
     ListView mainListView;
     ArrayAdapter<String> mainArrayAdapter;
     ArrayList<String> mainNoteList = new ArrayList<>();
     ShareActionProvider mainShareActionProvider;
+    private Intent mainShareIntent;
+    private SharedPreferences mainSharedPreferences;
+    private String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        displayWelcome();
 
         mainButton = (Button) findViewById(R.id.main_button);
         mainButton.setOnClickListener(this);
@@ -71,8 +68,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mainListView.setOnItemLongClickListener(this);
 
         setShareIntent(defaultShareSubject, defaultShareMessage);
-
-        displayWelcome();
 
         readArray();
 
