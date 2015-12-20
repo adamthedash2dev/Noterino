@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Noterino</string>
+    <!--<string name="clear_list">Clear List</string>-->
+    <string name="button">Save note</string>
+    <string name="hint">Type here</string>
+    <string name="chat_log">Saved notes</string>
+    <string name="shareMenuTitle">Share</string>
+
+</resources>
