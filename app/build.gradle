@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        adamConfig {
+            keyAlias 'adamsawesomeapps_keystore'
+            keyPassword 'c0nn0lly'
+            storeFile file('C:/Users/Adam/Desktop/app resources/keystore/adamsAwesomeApps.jks')
+            storePassword 'c0nn0lly'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
     defaultConfig {

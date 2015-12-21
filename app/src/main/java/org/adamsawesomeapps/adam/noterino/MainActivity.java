@@ -26,6 +26,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
+//Todo: Icon on app for number of messages
+//Todo: Icon has white border on low resolution screens
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
 
     private static final String defaultShareSubject = "Default Subject";
