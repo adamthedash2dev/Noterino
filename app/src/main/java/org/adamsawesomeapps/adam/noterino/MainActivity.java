@@ -142,7 +142,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mainArrayAdapter.notifyDataSetChanged();
         }
 
-
 //        Clears text input
         mainEditText.setText("");
 
@@ -287,5 +286,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
+    public void switchToReminders(View v){
+        Intent reminderIntent = new Intent(this, ReminderActivity.class);
+        startActivity(reminderIntent);
+
+
+
+
+//        setContentView(R.layout.reminders);
+    }
+
 
 }
